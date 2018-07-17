@@ -1,0 +1,59 @@
+
+<html>
+<title> HIIT
+</title>
+<body>
+	<h1> 
+		Welcome to HIIT Workout!
+		Pick your phase:
+		<button onclick="setInterval(refreshData, 3000)">Phase 1</button>
+		<button onclick=###>Phase 2</button>
+		<button onclick=###>Phase 3</button>
+	</h1>
+<!--
+<button onclick="setInterval(refreshData, 3000)">Start</button>
+<button onclick="refreshData">dooo</button>
+-->
+
+<script language="javascript">
+//HIIT Workout Javascript
+//Gabe Gordon
+var highIntensity = ["Jumping Jacks", "Jump Rope", "Sprint in Place", "Jump Squat", "Split Squat"];
+var lowIntensity = ["Jog in Place", "Slow Lunges", "Side Lunges"];
+var workoutSet=["this","f"];
+
+function getRandomNumber(list){
+	return Math.floor(Math.random() * (list.length - 0 )) + 0;
+}
+function getHighIntensityWorkOut(){
+	return highIntensity[getRandomNumber(highIntensity)];
+}
+
+function getLowIntensityWorkOut(){
+	return lowIntensity[getRandomNumber(lowIntensity)]
+}
+function fillSet(){
+	for(let i=0;i<3;i++){
+		workoutSet.push(getHighIntensityWorkout());
+		workoutSet.push(getLowIntensityWorkout());
+	}
+}
+fillSet();
+//document.write(getHighIntensityWorkOut());
+
+//console.log(workoutSet);
+var counter=0;
+function refreshData(){
+		
+//	document.write(workoutSet[0]);
+	document.write(workoutSet[counter]);
+	counter++;
+	
+	//document.write(getHighIntensityWorkOut());
+}
+
+
+//refreshData(); // execute function
+</script>
+</body>
+</html>
